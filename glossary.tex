@@ -1,0 +1,163 @@
+\usepackage[style=super,nonumberlist,toc]{glossaries}
+\makeglossaries
+
+\newacronym{hpc}{HPC}{High-Performance Computing}
+\newacronym{gpu}{GPU}{Graphics Processing Unit}
+\newacronym{dram}{DRAM}{Dynamic Random-Access Memory}
+\newacronym{ssd}{SSD}{Solid-State Drive}
+\newacronym{rtm}{RTM}{Reverse Time Migration}
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{rq}{RQ}{Research Question}
+\newacronym{so}{SO}{Specific Objective}
+\newacronym{nsight}{NSight}{NVIDIA profiling and trace tool}
+\newacronym{fdm}{FDM}{Finite Difference Method}
+\newacronym{hdd}{HDD}{Hard Disk Drive}
+\newacronym{snmg}{SNMG}{Single-Node Multi-GPU}
+\newacronym{mnmg}{MNMG}{Multi-Node Multi-GPU}
+\newacronym{hbms}{HBM2}{High Bandwidth Memory 2}
+\newacronym{PAV}{PAV}{Prefetch Action Vector, an array that schedules prefetching operations}
+\newacronym{PSA}{PSA}{Prefetch Setup Algorithm, method responsible for predicting cache misses and generating the PAV}
+\newacronym{FLOPS}{FLOPS}{Floating Point Operation per Second}
+\newacronym{PCIe}{PCIe}{Peripheral Component Interconnect Express, a standard interface for communication between the CPU and peripheral devices like GPUs}
+\newacronym{dct}{DCT}{Discrete Cosine Transform}
+\newacronym{bpc}{BPC}{Bit-Plane Coding}
+\newacronym{psnr}{PSNR}{Peak Signal-to-Noise Ratio}
+\newacronym{ssim}{SSIM}{Structural Similarity Index Measure}
+\newacronym{pcie}{PCIe}{Peripheral Component Interconnect Express}
+\newacronym{dtd}{D2D}{Device-to-Device memory copy}
+\newacronym{dth}{D2H}{Device-to-Host memory copy}
+\newacronym{h2d}{H2D}{Host-to-Device memory copy}
+\newacronym{oss}{OSS}{Open-Source Software}
+\newacronym{cuda}{CUDA}{Compute Unified Device Architecture, a parallel computing platform and programming model developed by NVIDIA}
+\newacronym{nvtx}{NVTX}{NVIDIA Tools Extension}
+\newacronym{mru}{MRU}{Most Recently Used}
+\newacronym{lru}{LRU}{Least Recently Used}
+\newacronym{cpu}{CPU}{Central Processing Unit}
+\newacronym{fpgas}{FPGA}{Field-Programmable Gate Array}
+\newacronym{simd}{SIMD}{Single Instruction, Multiple Data}
+\newacronym{simt}{SIMT}{Single Instruction, Multiple Threads}
+\newacronym{ompc}{OMPC}{OpenMP Cluster, a library that allows OpenMP directives to distribute work across multiple nodes using MPI (Message Passing Interface)}
+
+
+\newglossaryentry{pool}{name=Checkpoint Pool, description={Checkpointing data storage}}
+\newglossaryentry{save}{name=SAVE, description={Operation to take a snapshot/checkpoint of the current state of the computation to the cache or pool}}
+\newglossaryentry{restore}{name=RESTORE, description={Operation to load or rematerialize the checkpoint data from the cache or pool}}
+\newglossaryentry{fwd}{name=FORWARD, description={Forward computation}}
+\newglossaryentry{bwd}{name=BACKWARD, description={Backward computation}}
+\newglossaryentry{checkpointing}{
+    name=Checkpointing,
+    description={A technique for saving partial results during forward computation to avoid full recomputation during the backward phase}
+}
+\newglossaryentry{shot}{
+    name=Shot,
+    description={A single instance of wave propagation from a seismic source in a survey}
+}
+\newglossaryentry{zcut}{
+    name=zCut,
+    description={A checkpointing algorithm based on computational graph~\cite{zcut}}
+}
+
+\newglossaryentry{revolve}{
+    name=Revolve,
+    description={A well-known checkpointing algorithm~\cite{revolve}}
+}
+
+\newglossaryentry{uniform}{
+    name=Uniform,
+    description={Checkpointing algorithm that sets fixed intervals across the execution timeline}
+}
+
+\newglossaryentry{lossy_compression}{
+    name={Lossy Compression},
+    description={A data compression method that reduces data size by permanently eliminating certain information, particularly in floating-point precision}
+}
+
+\newglossaryentry{bitcomp}{
+    name={Bitcomp},
+    description={A GPU-based lossy compression algorithm by NVIDIA's NVCOMP}
+}
+
+\newglossaryentry{cuszp}{
+    name={cuSZp},
+    description={A GPU-based lossy compression algorithm from the SZ family}
+}
+
+\newglossaryentry{cuzfp}{
+    name={cuZFP},
+    description={A GPU-based lossy compression algorithm from the ZFP family}
+}
+
+\newglossaryentry{error_bound_compression}{
+    name={Error-bounded},
+    description={Compression that ensures the error introduced by the compression process remains within a predefined limit. Error bounds can be absolute or relative}
+}
+
+\newglossaryentry{fixed_ratio_compression}{
+    name={Fixed-ratio},
+    description={Compression that guarantees a specific compression ratio. It is suitable for scenarios with strict memory constraints, though it may sacrifice quality}
+}
+
+\newglossaryentry{prefetching_def}{
+    name={Prefetching},
+    description={The technique of loading data in advance to reduce wait times and improve system efficiency}
+}
+
+\newglossaryentry{timeliness_def}{
+    name={Timeliness},
+    description={Measures the interval of when a prefetch action initiated to the moment the data is requested}
+}
+
+\newglossaryentry{speedup}{
+    name={Speedup},
+    description={Performance gain observed when comparing the execution time of a baseline method with an optimized method}
+}
+
+\newglossaryentry{scalability}{
+    name={Scalability},
+    description={System's ability to maintain efficiency as resources such as nodes or cores are increased}
+}
+
+\newglossaryentry{cachehit}{
+    name={Cache Hit},
+    description={Event where the requested data is found in the cache, allowing for fast access without retrieving it from main memory or recomputing it}
+}
+
+\newglossaryentry{cachemiss}{
+    name={Cache Miss},
+    description={An event where the requested data is not found in the cache and must be retrieved from a slower memory source or recomputed}
+}
+
+\newglossaryentry{rawcachemiss}{
+    name={Raw Cache Miss},
+    description={Cache miss that occurs in the baseline, before any optimization is applied}
+}
+
+\newglossaryentry{cuzfp}{
+    name=cuZFP,
+    description={CUDA-based ZFP compressor}
+}
+\newglossaryentry{bitcomp}{
+    name=bitcomp,
+    description={Floating-point compressor}
+}
+\newglossaryentry{awave}{
+    name=Awave-3D,
+    description={Benchmark RTM implementation with checkpointing}
+}
+\newglossaryentry{zcut}{
+    name=zCut,
+    description={Deterministic checkpointing strategy}
+}
+\newglossaryentry{uniform}{
+    name=Uniform,
+    description={Uniform checkpointing algorithm}
+}
+\newglossaryentry{revolve}{
+    name=Revolve,
+    description={Deterministic checkpointing algorithm}
+}
+
+\newglossaryentry{snapshot}{
+    name=Snapshot,
+    description={The materialization of the computation data (checkpoint)}
+}

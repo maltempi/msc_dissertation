@@ -1,0 +1,859 @@
+@article{ijhpca,
+author = {Thiago Maltempi and Sandro Rigo and Marcio Pereira and Hervé Yviquel and Gustavo Leite and Orlando Lee and Jessé Costa and Guido Araujo},
+title ={Checkpointing fine-tuning for accelerating seismic applications in GPUs},
+journal = {The International Journal of High Performance Computing Applications},
+year = {2025},
+doi = {10.1177/10943420251340794},
+URL = {https://doi.org/10.1177/10943420251340794},
+eprint = {https://doi.org/10.1177/10943420251340794}
+}
+
+
+@misc{sc23,
+ title={Introducing Prefetching and Data Compression to Accelerate Checkpointing for Inverse Seismic Problems},
+ author={Maltempi, Thiago and Rigo, Sandro and Pereira, Marcio and Yviquel, Herv{\'e} and Costa, Jess{\'e} and Souza, Alan and Araujo, Guido},
+ year={2023},
+ howpublished={\url{https://sc23.supercomputing.org/proceedings/tech_poster/poster_files/rpost129s3-file2.pdf}},
+ note = {Poster presented at Super Computing 2023 (SC'23), Denver, CO, USA}
+}
+
+@InProceedings{europar,
+author="Maltempi, Thiago
+and Rigo, Sandro
+and Pereira, Marcio
+and Yviquel, Herv{\'e}
+and Costa, Jess{\'e}
+and Araujo, Guido",
+editor="Carretero, Jesus
+and Shende, Sameer
+and Garcia-Blas, Javier
+and Brandic, Ivona
+and Olcoz, Katzalin
+and Schreiber, Martin",
+title="Combining Compression and Prefetching to Improve Checkpointing for Inverse Seismic Problems in GPUs",
+booktitle="Euro-Par 2024: Parallel Processing",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="167--181",
+abstract="Inverse problems are crucial in various scientific and engineering fields requiring intricate mathematical and computational modeling. An example of such a problem is the Full Waveform Inversion (FWI), used in several geophysical applications like oil reservoir discovery. Central to solving FWI is Reverse Time Migration (RTM), a Geophysical algorithm for high-resolution subsurface imaging from seismic data that poses considerable computational challenges due to its extensive memory and computation demands. A typical approach to address the memory constraints of RTM includes decomposing the processing tasks in multiple GPUs, checkpointing the intermediate results, and rematerializing the computation from checkpoints when needed. This paper introduces a novel checkpoint prefetching mechanism called GPUZIP. It combines Revolve, a well-known checkpoint algorithm, and GPU-based data compression to improve checkpoint memory utilization. GPUZIP was designed to allow the flexible utilization of different compression algorithms and target applications. Experimental results show that the combination of prefetching and GPU data compression enabled by GPUZIP significantly improves the computation-to-communication ratio for the RTM application. Speed-ups of up to {\$}{\$}3.90 {\backslash}times {\$}{\$}3.90{\texttimes}and a remarkable {\$}{\$}80 {\backslash}times {\$}{\$}80{\texttimes}Host-to-Device data transfer reduction have been achieved when running a well-known geophysics benchmark. The proposed approach mitigates the computational challenges of RTM and has the potential for applicability and to bring performance improvements in other scientific computing fields.",
+isbn="978-3-031-69583-4"
+}
+
+@misc{githubrepo,
+  title = {GPUZIP - Pending approval for open-source.},
+  year = {2025},
+  howpublished = {\url{https://github.com/LSC-Unicamp/GPUZIP}},
+  note = {Accessed: May 26, 2025}
+}
+
+@misc{dockerhub,
+  title = {Docker Hub Image maltempi/awave-dev:ompc},
+  year = {2025},
+  howpublished = {\url{https://hub.docker.com/layers/maltempi/awave-dev/ompc/images/sha256-25ddcffeae92ae033359acfd7e4dd5388bce4c23349037bee2eaed64644791e4}},
+  note = {Accessed: May 26, 2025}
+}
+
+
+@data{ds,
+author = {Maltempi, Thiago and Rigo, Sandro and Yviquel, Hervé and Pereira, Márcio and Costa, Jessé and Araújo, Guido},
+publisher = {Repositório de Dados de Pesquisa da Unicamp},
+title = {{Replication data for GPUZIP v2.0: accelerating checkpointing on GPUs with prefetching and compression}},
+UNF = {UNF:6:XJvy0oR5BoaO+hEIPRlr5Q==},
+year = {2024},
+version = {V1},
+doi = {10.25824/redu/KJ9KVA},
+url = {https://doi.org/10.25824/redu/KJ9KVA}
+}
+
+
+
+@misc{ogbon,
+  author = {{TOP500}},
+  title = {Ogbon Cimatec/Petrobras - Bull Sequana X1000, Xeon Gold 6240 18C 2.6GHz, Mellanox InfiniBand EDR, NVIDIA Tesla V100 SXM2},
+  year = {2024},
+  howpublished = {\url{https://top500.org/system/179703/}},
+  note = {Accessed: May 26, 2025}
+}
+
+@misc{top500,
+  author = {{TOP500}},
+  title = {TOP 500 list from November 2024},
+  year = {2024},
+  howpublished = {\url{https://top500.org/lists/top500/2024/11/}},
+  note = {Accessed: May 26, 2025}
+}
+
+
+
+@misc{sdumont,
+  author = {Laboratório Nacional de Computação Científica (LNCC)},
+  title = {Supercomputador SDumont},
+  year = {2025},
+  howpublished = {\url{https://sdumont.lncc.br/machine.php}},
+  note = {Accessed: May 26, 2025}
+}
+
+@misc{sdumont2,
+  author = {{TOP500}},
+  title = {Santos Dumont (SDumont) - Bull Sequana X1000, Xeon Gold 6252 24C 2.1GHz, Mellanox InfiniBand EDR, NVIDIA Tesla V100 SXM2},
+  year = {2024},
+  howpublished = {\url{https://top500.org/system/179704/}},
+  note = {Accessed: May 26, 2025}
+}
+
+
+@article{etgen2009,
+    author = {Etgen, John and Gray, Samuel H. and Zhang, Yu},
+    title = {An overview of depth imaging in exploration geophysics},
+    journal = {Geophysics},
+    volume = {74},
+    number = {6},
+    pages = {WCA5-WCA17},
+    year = {2009},
+    month = {12},
+    abstract = {Prestack depth migration is the most glamorous step of seismic processing because it transforms mere data into an image, and that image is considered to be an accurate structural description of the earth. Thus, our expectations of its accuracy, robustness, and reliability are high. Amazingly, seismic migration usually delivers. The past few decades have seen migration move from its heuristic roots to mathematically sound techniques that, using relatively few assumptions, render accurate pictures of the interior of the earth. Interestingly, the earth and the subjects we want to image inside it are varied enough that, so far, no single migration technique has dominated practical application. All techniques continually improve and borrow from each other, so one technique may never dominate. Despite the progress in structural imaging, we have not reached the point where seismic images provide quantitatively accurate descriptions of rocks and fluids. Nor have we attained the goal of using migration as part of a purely computational process to determine subsurface velocity. In areas where images have the highest quality, we might be nearing those goals, collectively called inversion. Where data are more challenging, the goals seem elusive. We describe the progress made in depth migration to the present and the most significant barriers to attaining its inversion goals in the future. We also conjecture on progress likely to be made in the years ahead and on challenges that migration might not be able to meet.},
+    issn = {0016-8033},
+    doi = {10.1190/1.3223188},
+    url = {https://doi.org/10.1190/1.3223188},
+    eprint = {https://pubs.geoscienceworld.org/seg/geophysics/article-pdf/74/6/WCA5/3137742/gsgpy\_74\_6\_WCA5.pdf},
+}
+
+
+
+@article{marmousi2,
+  doi = {10.1190/1.2172306},
+  year = {2006},
+  month = feb,
+  publisher = {Society of Exploration Geophysicists},
+  volume = {25},
+  number = {2},
+  pages = {156--166},
+  author = {Martin G., Wiley R., Marfurt K.},
+  title = {Marmousi2: An elastic upgrade for Marmousi},
+  journal = {The Leading Edge}
+}
+
+@book{salt,
+  title = {3-D Salt and Overthrust Models},
+  author = {Aminzadeh, Fred and Brac, Jérôme and Kunz, Thomas},
+  year = {1997},
+  publisher = {Society of Exploration Geophysicists},
+  address = {Tulsa},
+  series = {SEG/EAGE 3-D Modeling Series No. 1}
+}
+
+
+@article{rtm,
+title = "Reverse time migration.",
+abstract = "Migration of stacked or zero-offset sections is based on deriving the wave amplitude in space from wave field observations at the surface. Conventionally this calculation has been carried out through a depth extrapolation. We examine the alternative of carrying out the migration through a reverse time extrapolation. This approach may offer improvements over existing migration methods, especially in cases of steeply dipping structures with strong velocity contrasts. This migration method is tested using appropriate synthetic data sets. -Authors",
+author = {E. Baysal and Kosloff, {D. D.} and Sherwood, {J. W.C.}},
+year = "1983",
+doi = "10.1190/1.1441434",
+language = "אנגלית",
+volume = "48",
+pages = "1514--1524",
+journal = "Geophysics",
+issn = "0016-8033",
+publisher = "Society of Exploration Geophysicists",
+number = "11",
+}
+
+@article{symes2007,
+   abstract = {Reverse time migration (RTM) requires that fields computed in forward time be accessed in reverse order. Such out-of-order access, to recursively computed fields, requires that some part of the recursion history be stored (checkpointed), with the remainder computed by repeating parts of the forward computation. Optimal checkpointing algorithms choose checkpoints in such a way that the total storage is minimized for a prescribed level of excess computation, or vice versa. Optimal checkpointing dramatically reduces the storage required by RTM, compared to that needed for nonoptimal implementations, at the price of a small increase in computation. This paper describes optimal checkpointing in a form which applies both to RTM and other applications of the adjoint state method, such as construction of velocity updates from prestack wave equation migration. © 2007 Society of Exploration Geophysicists.},
+   author = {William W. Symes},
+   doi = {10.1190/1.2742686},
+   issn = {00168033},
+   issue = {5},
+   journal = {Geophysics},
+   publisher = {Society of Exploration Geophysicists},
+   title = {Reverse time migration with optimal checkpointing},
+   volume = {72},
+   year = {2007}
+}
+
+
+@techReport{dussand2008,
+   abstract = {The imaging condition used in reverse-time migration requires that the source wavefield (computed via a forward recursion) and the receiver wavefield (computed via a backwards recur-sion) must be made available at the same time in an implementation of the algorithm. Several strategies to organize the calculation can be employed, differing in balance between memory and computation. This paper describes and compares these different approaches, and argues that strategies favoring computational complexity over memory (to the point where disk i/o can be avoided) are attractive for 3D prestack migrations. An example of 3D reverse-time migration applied to wide-azimuth data from the Gulf of Mexico is presented to support the claim.},
+   author = {Eric Dussaud},
+   keywords = {acoustic,algorithm,migration,prestack,wave equation},
+   title = {Computational strategies for reverse-time migration},
+   url = {http://library.seg.org/},
+   year = 2008
+
+}
+
+
+@inbook{haldar2018,
+   abstract = {Geophysics works on the principles of physics to study Earth from core to surface. The process involves quantitative measurements of response or contrast in properties between rocks, structures, stratigraphy, and mineralization. Variations are either the position of objects or the function of time. Interpretation highlights the “signal” of mineral-related features under investigation or nongeological “noise.” An anomaly is a significant departure from the normal pattern of background values and must be explained geologically, indicating possible occurrences of oil and mineral deposits. Geophysics covers a wide domain of applications, e.g., seismic, gravitational, magnetic, electrical, including resistivity, induced potential and self-potential, electromagnetic, radiometric, and borehole logging. Geophysics supplements a quick and cost-effective path to identify subsurface objects and prioritize drill targets. Borehole logging asserts ore continuity during feasibility and mining. Specialized instrument training, mathematical interpretation skill, capacity of depth penetration, and the experience of practicing professionals add significance to successful investigations. It optimizes exploration programs by maximizing the rate of ground coverage and minimizing expensive drilling needs. The techniques are time tested and proven for discovery of deep-seated mineral deposits all over the world.},
+   author = {Swapan Kumar Haldar},
+   doi = {10.1016/b978-0-12-814022-2.00006-x},
+   booktitle = {Mineral Exploration},
+   pages = {103-122},
+   publisher = {Elsevier},
+   title = {Exploration Geophysics},
+   year = {2018}
+}
+
+@inproceedings{cuszp,
+author = {Huang, Yafan and Di, Sheng and Yu, Xiaodong and Li, Guanpeng and Cappello, Franck},
+title = {cuSZp: An Ultra-fast GPU Error-bounded Lossy Compression Framework with Optimized End-to-End Performance},
+year = {2023},
+isbn = {9798400701092},
+publisher = {ACM},
+doi = {10.1145/3581784.3607048},
+series = {SC'23}
+}
+
+@inproceedings{fz,
+   author = {Boyuan Zhang and Jiannan Tian and Sheng Di and Xiaodong Yu and Yunhe Feng and Xin Liang and Dingwen Tao and Franck Cappello},
+   city = {New York, NY, USA},
+   doi = {10.1145/3588195.3592994},
+   isbn = {9798400701559},
+   booktitle = {Proceedings of the 32nd International Symposium on High-Performance Parallel and Distributed Computing},
+   month = {8},
+   pages = {129-142},
+   publisher = {ACM},
+   title = {FZ-GPU: A Fast and High-Ratio Lossy Compressor for Scientific Computing Applications on GPUs},
+   year = {2023}
+}
+
+
+@unpublished{zcut,
+  title = {zCut: An Optimization Algorithm for Checkpointing Computional Graphs},
+  author = {under review.},
+  year = {2024},
+  note   = {Under review},
+}
+
+@article{revolve,
+author = {Griewank, Andreas and Walther, Andrea},
+title = {Algorithm 799: Revolve: An Implementation of Checkpointing for the Reverse or Adjoint Mode of Computational Differentiation},
+year = {2000},
+issue_date = {March 2000},
+publisher = {ACM},
+address = {New York, NY, USA},
+volume = {26},
+number = {1},
+issn = {0098-3500},
+doi = {10.1145/347837.347846},
+journal = {ACM Trans. Math. Sw.},
+month = {mar},
+pages = {19–45},
+numpages = {27},
+keywords = {checkpointing, computational differentiation, reverse mode, adjoint mode}
+}
+
+@article{revolve1992,
+   author = {Andreas Griewank},
+   doi = {10.1080/10556789208805505},
+   issn = {1055-6788},
+   issue = {1},
+   journal = {Optimization Methods and Software},
+   month = {1},
+   pages = {35-54},
+   title = {Achieving logarithmic growth of temporal and spatial complexity in reverse automatic differentiation},
+   volume = {1},
+   year = {1992}
+}
+
+
+@article{devito-api,
+  author = {Louboutin, M. and Lange, M. and Luporini, F. and Kukreja, N. and Witte, P. A. and Herrmann, F. J. and Velesko, P. and Gorman, G. J.},
+  title = {Devito (v3.1.0): an embedded domain-specific language for finite differences and geophysical exploration},
+  journal = {Geoscientific Model Development},
+  volume = {12},
+  year = {2019},
+  number = {3},
+  pages = {1165--1187},
+  url = {https://www.geosci-model-dev.net/12/1165/2019/},
+  doi = {10.5194/gmd-12-1165-2019}
+}
+
+@article{devito-compiler,
+  author = {Luporini, Fabio and Louboutin, Mathias and Lange, Michael and Kukreja, Navjot and Witte, Philipp and H\"{u}ckelheim, Jan and Yount, Charles and Kelly, Paul H. J. and Herrmann, Felix J. and Gorman, Gerard J.},
+  title = {Architecture and Performance of Devito, a System for Automated Stencil Computation},
+  year = {2020},
+  issue_date = {March 2020},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {46},
+  number = {1},
+  issn = {0098-3500},
+  url = {https://doi.org/10.1145/3374916},
+  doi = {10.1145/3374916},
+  journal = {ACM Trans. Math. Softw.},
+  month = {apr},
+  articleno = {6},
+  numpages = {28},
+  keywords = {stencil, domain-specific language, symbolic processing, performance optimization, compiler, structured grid, Finite-difference method}
+}
+
+@article{kukreja2020,
+   author = {Navjot Kukreja and Jan Hückelheim and Mathias Louboutin and John Washbourne and Paul H.J. Kelly and Gerard J. Gorman},
+   doi = {10.5194/gmd-15-3815-2022},
+   issn = {19919603},
+   issue = {9},
+   journal = {Geoscientific Model Development},
+   keywords = {Full waveform inversion,Lossy compression,checkpointing,memory},
+   month = {9},
+   pages = {3815-3829},
+   publisher = {Copernicus GmbH},
+   title = {Lossy Checkpoint Compression in Full Waveform Inversion: a case study with ZFPv0.5.5 and the Overthrust Model},
+   volume = {15},
+   url = {https://arxiv.org/abs/2009.12623v2},
+   year = {2020}
+}
+
+@BOOK{kirk,
+  title     = "Programming massively parallel processors",
+  author    = "Hwu, Wen-Mei W and Kirk, David B and El Hajj, Izzat",
+  publisher = "Morgan Kaufmann",
+  edition   =  4,
+  month     =  sep,
+  year      =  2022,
+  address   = "London, England",
+  language  = "en"
+}
+
+@manual{cuda,
+  title        = {CUDA C Programming Guide},
+  author       = {{NVIDIA Corporation}},
+  year         = {2025},
+  note         = {Version 12.8},
+  url          = {https://docs.nvidia.com/cuda/pdf/CUDA_C_Programming_Guide.pdf}
+}
+
+@book{hennessy,
+author = {Hennessy, John L. and Patterson, David A.},
+title = {Computer Architecture, Sixth Edition: A Quantitative Approach},
+year = {2017},
+isbn = {0128119055},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+edition = {6th}
+}
+
+@ARTICLE{boehm2016,
+	doi = {10.1190/geo2015-0653.1},
+	year = {2016-11},
+	volume = {81},
+	type = {Journal Article},
+	journal = {Geophysics},
+	author = {Boehm, Christian and Hanzich, Mauricio and de la Puente, Josep and Fichtner, Andreas},
+	issn = {0016-8033},
+	language = {en},
+	publisher = {Society of Exploration Geophysicists},
+	number = {6},
+	title = {Wavefield compression for adjoint methods in full-waveform inversion},
+	PAGES = {R385 - R397},
+	Note = {Received 23 November 2015, Accepted 8 July 2016, Published 13 September 2016.}
+}
+
+@article{wang2023,
+   author = {Wu Wang and Wei Zhang and Tao Lei},
+   doi = {10.1016/J.CAGEO.2023.105298},
+   issn = {0098-3004},
+   journal = {Computers & Geosciences},
+   keywords = {Data compression,Seismic forward simulation,Seismic waveform inversion,Tucker tensor decomposition},
+   month = {3},
+   pages = {105298},
+   publisher = {Pergamon},
+   title = {Compression of seismic forward modeling wavefield using TuckerMPI},
+   volume = {172},
+   year = {2023}
+}
+
+
+@misc{di2025_arxiv,
+      title={A Survey on Error-Bounded Lossy Compression for Scientific Datasets}, 
+      author={Sheng Di and Jinyang Liu and Kai Zhao and Xin Liang and Robert Underwood and Zhaorui Zhang and Milan Shah and Yafan Huang and Jiajun Huang and Xiaodong Yu and Congrong Ren and Hanqi Guo and Grant Wilkins and Dingwen Tao and Jiannan Tian and Sian Jin and Zizhe Jian and Daoce Wang and MD Hasanur Rahman and Boyuan Zhang and Shihui Song and Jon C. Calhoun and Guanpeng Li and Kazutomo Yoshii and Khalid Ayed Alharthi and Franck Cappello},
+      year={2025},
+      eprint={2404.02840},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC},
+      url={https://arxiv.org/abs/2404.02840}, 
+}*/
+
+@article{di2025,
+   abstract = {Error-bounded lossy compression has been effective in significantly reducing the data storage/transfer burden while preserving the reconstructed data fidelity very well. Many error-bounded lossy compressors have been developed for a wide range of parallel and distributed use cases for years. They are designed with distinct compression models and principles, such that each of them features particular pros and cons. In this paper we provide a comprehensive survey of emerging error-bounded lossy compression techniques. The key contribution is fourfold. (1) We summarize a novel taxonomy of lossy compression into 6 classic models. (2) We provide a comprehensive survey of 10 commonly used compression components/modules. (3) We summarized pros and cons of 47 state-of-the-art lossy compressors and present how state-of-the-art compressors are designed based on different compression techniques. (4) We discuss how customized compressors are designed for specific scientific applications and use-cases. We believe this survey is useful to multiple communities including scientific applications, high-performance computing, lossy compression, and big data.},
+   author = {Sheng Di and Jinyang Liu and Kai Zhao and Xin Liang and Robert Underwood and Zhaorui Zhang and Milan Shah and Yafan Huang and Jiajun Huang and Xiaodong Yu and Congrong Ren and Hanqi Guo and Grant Wilkins and Dingwen Tao and Jiannan Tian and Sian Jin and Zizhe Jian and Daoce Wang and Md Hasanur Rahman and Boyuan Zhang and Shihui Song and Jon Calhoun and Guanpeng Li and Kazutomo Yoshii and Khalid Alharthi and Franck Cappello},
+   doi = {10.1145/3733104},
+   issn = {0360-0300},
+   journal = {ACM Computing Surveys},
+   month = {5},
+   title = {A Survey on Error-Bounded Lossy Compression for Scientific Datasets},
+   year = {2025}
+}
+
+
+@inproceedings{haigh2014,
+   author = {Andrew A. Haigh and Eric C. McCreath},
+   doi = {10.1109/IPDPSW.2014.140},
+   isbn = {978-1-4799-4116-2},
+   booktitle = {2014 IEEE International Parallel & Distributed Processing Symposium Workshops},
+   month = {5},
+   note = {In this study, they applied compression for float-point data (as we are) using lossy compression with a fixed-point technique. They compress the data in the CPU end, before copying it to GPU and they also compress in the GPU end.Observations:- They present speedup results in the abstract.- They compare with all-in GPU memory vs compression. We do not intend to do that since all data in GPU is not a practical scenario for the fields of the real world.- In order to test memory capability, they limited gpu memory to 200MB. This was a technique in order to avoid computation of large fields, like we are doing.},
+   pages = {1248-1255},
+   publisher = {IEEE},
+   title = {Acceleration of GPU-Based Ultrasound Simulation via Data Compression},
+   year = {2014}
+}
+
+@article{liu2022,
+   author = {Jinyang Liu and Sheng Di and Kai Zhao and Xin Liang and Zizhong Chen and Franck Cappello},
+   doi = {10.1109/SC41404.2022.00067},
+   isbn = {9781665454445},
+   issn = {21674337},
+   journal = {International Conference for High Performance Computing, Networking, Storage and Analysis, SC},
+   keywords = {error-bounded lossy compression,interpolation,quality metrics,scientific datasets},
+   publisher = {IEEE Computer Society},
+   title = {Dynamic Quality Metric Oriented Error Bounded Lossy Compression for Scientific Datasets},
+   volume = {2022-November},
+   year = {2022}
+}
+
+@article{liu2012,
+   author = {Hongwei Liu and Bo Li and Hong Liu and Xiaolong Tong and Qin Liu and Xiwen Wang and Wenqing Liu},
+   doi = {10.1111/j.1365-2478.2011.01032.x},
+   issn = {0016-8025},
+   issue = {5},
+   journal = {Geophysical Prospecting},
+   month = {9},
+   pages = {906-918},
+   title = {The issues of prestack reverse time migration and solutions with Graphic Processing Unit implementation},
+   volume = {60},
+   year = {2012}
+}
+
+@techReport{v100,
+   author = {NVIDIA Corporation},
+   institution = {NVIDIA Corporation},
+   title = {NVIDIA TESLA V100 GPU Architecture},
+   url = {https://images.nvidia.com/content/volta-architecture/pdf/volta-architecture-whitepaper.pdf},
+   year = {2017}
+}
+
+@techReport{a100,
+   author = {NVIDIA Corporation},
+   institution = {NVIDIA Corporation},
+   title = {NVIDIA TESLA A100 Tensor Core GPU Architecture},
+   url = {https://images.nvidia.com/aem-dam/en-zz/Solutions/data-center/nvidia-ampere-architecture-whitepaper.pdf},
+   year = {2020}
+}
+
+@techReport{xeon,
+   author = {Intel},
+   institution = {Intel},
+   title = {APP Metrics for Intel Microprocessors},
+   url = {https://cdrdv2-public.intel.com/840270/APP-for-Intel-Xeon-Processors.pdf},
+   year = {2025}
+}
+
+
+@inproceedings{barbosa2023,
+   author = {Carlos HS Barbosa and Alvaro LGA Coutinho},
+   doi = {10.1109/SBAC-PAD59825.2023.00028},
+   isbn = {979-8-3503-0548-7},
+   booktitle = {2023 IEEE 35th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)},
+   month = {10},
+   pages = {192-201},
+   publisher = {IEEE},
+   title = {Reverse Time Migration with Lossy and Lossless Wavefield Compression},
+   year = {2023}
+}
+
+@inproceedings{rigon2024,
+author = {Rigon, Pedro and Schussler, Brenda and Sardinha, Alexandre and Silva, Pedro M. and Oliveira, F\'{a}bio and Carissimi, Alexandre and Panetta, Jairo and Spiga, Filippo and Lorenzon, Arthur and Navaux, Philippe O. A.},
+title = {Harnessing Data Movement Strategies to&nbsp;Optimize Performance-Energy Efficiency of&nbsp;Oil \& Gas Simulations in&nbsp;HPC},
+year = {2024},
+isbn = {978-3-031-69765-4},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-031-69766-1_15},
+doi = {10.1007/978-3-031-69766-1_15},
+booktitle = {Euro-Par 2024: Parallel Processing: 30th European Conference on Parallel and Distributed Processing, Madrid, Spain, August 26–30, 2024, Proceedings, Part II},
+pages = {211–225},
+numpages = {15},
+keywords = {Oil \& Gas Exploration, Data movement strategies, GPU, Performance and energy efficiency},
+location = {Madrid, Spain}
+}
+
+
+@inbook{ahlroth2011,
+   author = {Lauri Ahlroth and Olli Pottonen and André Schumacher},
+   doi = {10.1007/978-3-642-22685-4_27},
+   pages = {297-306},
+   title = {Approximately Uniform Online Checkpointing},
+   year = {2011}
+}
+
+@inproceedings{patterson1995,
+   author = {R. H. Patterson and G. A. Gibson and E. Ginting and D. Stodolsky and J. Zelenka},
+   city = {New York, New York, USA},
+   doi = {10.1145/224056.224064},
+   isbn = {0897917154},
+   booktitle = {Proceedings of the fifteenth ACM symposium on Operating systems principles  - SOSP '95},
+   pages = {79-95},
+   publisher = {ACM Press},
+   title = {Informed prefetching and caching},
+   year = {1995}
+}
+
+@inproceedings{carr1981,
+   author = {Richard W. Carr and John L. Hennessy},
+   city = {New York, New York, USA},
+   doi = {10.1145/800216.806596},
+   isbn = {0897910621},
+   booktitle = {Proceedings of the eighth symposium on Operating systems principles  - SOSP '81},
+   pages = {87-95},
+   publisher = {ACM Press},
+   title = {WSCLOCK---a simple and effective algorithm for virtual memory management},
+   year = {1981}
+}
+
+@article{butt2007,
+   author = {Ali R. Butt and Chris Gniady and Y. Charlie Hu},
+   doi = {10.1109/TC.2007.1029},
+   issn = {0018-9340},
+   issue = {7},
+   journal = {IEEE Transactions on Computers},
+   month = {7},
+   pages = {889-908},
+   title = {The Performance Impact of Kernel Prefetching on Buffer Cache Replacement Algorithms},
+   volume = {56},
+   year = {2007}
+}
+
+@inproceedings{maurya2023,
+   author = {Avinash Maurya and M. Mustafa Rafique and Thierry Tonellot and Hussain J. AlSalem and Franck Cappello and Bogdan Nicolae},
+   city = {New York, NY, USA},
+   doi = {10.1145/3588195.3592987},
+   isbn = {9798400701559},
+   booktitle = {Proceedings of the 32nd International Symposium on High-Performance Parallel and Distributed Computing},
+   month = {8},
+   pages = {73-85},
+   publisher = {ACM},
+   title = {GPU-Enabled Asynchronous Multi-level Checkpoint Caching and Prefetching},
+   year = {2023}
+}
+
+@INPROCEEDINGS{maurya2023compress,
+  author={Maurya, Avinash and Nicolae, Bogdan and Rafique, M. Mustafa and Cappello, Franck},
+  booktitle={2023 IEEE 30th International Conference on High Performance Computing, Data, and Analytics (HiPC)}, 
+  title={Towards Efficient I/O Pipelines Using Accumulated Compression}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={256-265},
+  keywords={Checkpointing;Performance evaluation;Runtime;High performance computing;Pipelines;Graphics processing units;Throughput;GPU compression and checkpointing;data accumulation;fast compression},
+  doi={10.1109/HiPC58850.2023.00043}}
+
+
+@inproceedings{hore2010,
+   author = {Alain Hore and Djemel Ziou},
+   doi = {10.1109/ICPR.2010.579},
+   isbn = {978-1-4244-7542-1},
+   booktitle = {2010 20th International Conference on Pattern Recognition},
+   month = {8},
+   pages = {2366-2369},
+   publisher = {IEEE},
+   title = {Image Quality Metrics: PSNR vs. SSIM},
+   year = {2010}
+}
+
+@inproceedings{mogul1997,
+   author = {Jeffrey C. Mogul and Fred Douglis and Anja Feldmann and Balachander Krishnamurthy},
+   city = {New York, NY, USA},
+   doi = {10.1145/263105.263162},
+   isbn = {089791905X},
+   booktitle = {Proceedings of the ACM SIGCOMM '97 conference on Applications, technologies, architectures, and protocols for computer communication},
+   month = {10},
+   pages = {181-194},
+   publisher = {ACM},
+   title = {Potential benefits of delta encoding and data compression for HTTP},
+   year = {1997}
+}
+
+@InProceedings{shen2022,
+author="Shen, Jingcheng
+and Wu, Yifan
+and Okita, Masao
+and Ino, Fumihiko",
+title="Accelerating GPU-Based Out-of-Core Stencil Computation with On-the-Fly Compression",
+booktitle="PDCAT'22",
+year="2022",
+publisher="Springer",
+address="Cham",
+pages="3--14",
+doi="10.1007/978-3-030-96772-7_1"
+}
+
+@Article{shen2023,
+author={Shen, Jingcheng
+and Long, Linbo
+and Deng, Xin
+and Okita, Masao
+and Ino, Fumihiko},
+title={A compression-based memory-efficient optimization for out-of-core GPU stencil computation},
+journal={The Journal of Supercomputing},
+year={2023},
+month={Feb},
+day={20},
+abstract={A code for out-of-core stencil computation manages data that exceeds the memory capacity of a GPU. However, such a code necessitates frequent data transfers between the CPU and GPU, which often impede overall performance. In this work, we propose a compression-based, memory-efficient method to accelerate out-of-core stencil codes. First, an on-the-fly compression technique is integrated into the out-of-core computation to reduce CPU-GPU data transfers. Secondly, a single-working-buffer strategy is employed to reduce the GPU memory usage, enabling more data to be stored on the GPU for reuse, resulting in increased temporal blocking steps. Experimental results demonstrate that the proposed method significantly reduces the GPU memory usage by 21{\%}, thereby creating space for doubling the number of temporal blocking steps compared to the codes without compression. Our proposed method has shown to help the high-order, data-transfer-bound stencil codes achieve speedups up to {\$}{\$}2.09{\backslash}times {\$}{\$}for single-precision floating-point format and up to {\$}{\$}1.92{\backslash}times {\$}{\$}for double-precision floating-point format on an NVIDIA Tesla V100 GPU in comparison with the codes without compression.},
+issn={1573-0484},
+doi={10.1007/s11227-023-05103-8}
+}
+
+@inproceedings{dmitriev2022,
+  title={Error-Bounded Lossy Compression in Reverse Time Migration},
+  author={Dmitriev, M and Tonellot, T and AlSalem, HJ and Di, S},
+  booktitle={Sixth EAGE High Performance Computing Workshop},
+  volume={2022},
+  number={1},
+  pages={1--5},
+  year={2022},
+  organization={EAGE Publications BV}
+}
+
+@article{zfp,
+   abstract = {Current compression schemes for floating-point data commonly take fixed-precision values and compress them to a variable-length bit stream, complicating memory management and random access. We present a fixed-rate, near-lossless compression scheme that maps small blocks of 4d values in d dimensions to a fixed, user-specified number of bits per block, thereby allowing read and write random access to compressed floating-point data at block granularity. Our approach is inspired by fixed-rate texture compression methods widely adopted in graphics hardware, but has been tailored to the high dynamic range and precision demands of scientific applications. Our compressor is based on a new, lifted, orthogonal block transform and embedded coding, allowing each per-block bit stream to be truncated at any point if desired, thus facilitating bit rate selection using a single compression scheme. To avoid compression or decompression upon every data access, we employ a software write-back cache of uncompressed blocks. Our compressor has been designed with computational simplicity and speed in mind to allow for the possibility of a hardware implementation, and uses only a small number of fixed-point arithmetic operations per compressed value. We demonstrate the viability and benefits of lossy compression in several applications, including visualization, quantitative data analysis, and numerical simulation.},
+   author = {Peter Lindstrom},
+   doi = {10.1109/TVCG.2014.2346458},
+   issn = {10772626},
+   issue = {12},
+   journal = {IEEE Transactions on Visualization and Computer Graphics},
+   keywords = {Data compression,embedded coding,floating-point arrays,orthogonal block transform},
+   month = {12},
+   note = {ZFP article},
+   pages = {2674-2683},
+   publisher = {IEEE Computer Society},
+   title = {Fixed-rate compressed floating-point arrays},
+   volume = {20},
+   year = {2014}
+}
+
+@misc{nvcomp,
+title = {{NVIDIA NVComp}},
+howpublished = {\url{https://developer.nvidia.com/nvcomp}},
+note = {Accessed: May 26, 2025}
+}
+
+@inproceedings{ompc,
+author = {Yviquel, Herv\'{e} and Pereira, Marcio and Francesquini, Em\'{\i}lio and Valarini, Guilherme and Leite, Gustavo and Rosso, Pedro and Ceccato, Rodrigo and Cusihualpa, Carla and Dias, Vitoria and Rigo, Sandro and Souza, Alan and Araujo, Guido},
+title = {The OpenMP Cluster Programming Model},
+year = {2023},
+isbn = {9781450394451},
+doi = {10.1145/3547276.3548444},
+articleno = {17},
+numpages = {11},
+keywords = {Concurrent Programming, HPC, Parallel Programming},
+location = {<conf-loc>, <city>Bordeaux</city>, <country>France</country>, </conf-loc>},
+}
+
+
+
+@article{cappello2025,
+  title={Lossy Compression of Scientific Data: Applications Constrains and Requirements},
+  author={Cappello, Franck and Baker, Allison and Bozda, Ebru and Burtscher, Martin and Chard, Kyle and Di, Sheng and Grady, Paul Christopher O and Jiang, Peng and Li, Shaomeng and Lindahl, Erik and others},
+  journal={arXiv preprint arXiv:2503.20031},
+  year={2025}
+}
+
+@inproceedings{huang2023,
+   author = {Yafan Huang and Kai Zhao and Sheng Di and Guanpeng Li and Maxim Dmitriev and Thierry-Laurent D. Tonellot and Franck Cappello},
+   doi = {10.1109/CCGrid57682.2023.00066},
+   isbn = {979-8-3503-0119-9},
+   booktitle = {2023 IEEE/ACM 23rd International Symposium on Cluster, Cloud and Internet Computing (CCGrid)},
+   month = {5},
+   pages = {651-661},
+   publisher = {IEEE},
+   title = {Towards Improving Reverse Time Migration Performance by High-speed Lossy Compression},
+   year = {2023}
+}
+
+@article{margetis2021,
+   author = {A. S.I. Margetis and E. M. Papoutsis-Kiachagias and K. C. Giannakoglou},
+   doi = {10.1016/J.CMA.2021.114152},
+   issn = {0045-7825},
+   journal = {Computer Methods in Applied Mechanics and Engineering},
+   keywords = {Computational Fluid Dynamics,Incremental Proper Generalized Decomposition,Lossy Compression,Unsteady Adjoint,ZFP},
+   month = {12},
+   pages = {114152},
+   publisher = {North-Holland},
+   title = {Lossy compression techniques supporting unsteady adjoint on 2D/3D unstructured grids},
+   volume = {387},
+   year = {2021},
+}
+
+
+@article{margetis2023,
+   author = {Andreas Stefanos I. Margetis and Evangelos M. Papoutsis-Kiachagias and Kyriakos C. Giannakoglou},
+   doi = {10.1002/FLD.5136},
+   issn = {1097-0363},
+   issue = {1},
+   journal = {International Journal for Numerical Methods in Fluids},
+   keywords = {OpenFOAM,Proper Generalized Decomposition,binomial check,computational fluid dynamics,lossless and lossy data compression algorithms,pointing,unsteady adjoint},
+   month = {1},
+   pages = {23-43},
+   publisher = {John Wiley & Sons, Ltd},
+   title = {Reducing memory requirements of unsteady adjoint by synergistically using check-pointing and compression},
+   volume = {95},
+   url = {https://onlinelibrary.wiley.com/doi/full/10.1002/fld.5136 https://onlinelibrary.wiley.com/doi/abs/10.1002/fld.5136 https://onlinelibrary.wiley.com/doi/10.1002/fld.5136},
+   year = {2023},
+}
+
+@article{mittal2017,
+   abstract = {As the trends of process scaling make memory systems an even more crucial bottleneck, the importance of latency hiding techniques such as prefetching grows further. However, naively using prefetching can harm performance and energy efficiency and, hence, several factors and parameters need to be taken into account to fully realize its potential. In this article, we survey several recent techniques that aim to improve the implementation and effectiveness of prefetching. We characterize the techniques on several parameters to highlight their similarities and differences. The aim of this survey is to provide insights to researchers into working of prefetching techniques and spark interesting future work for improving the performance advantages of prefetching even further.},
+   author = {Sparsh Mittal},
+   doi = {10.1145/2907071},
+   issn = {0360-0300},
+   issue = {2},
+   journal = {ACM Computing Surveys},
+   month = {6},
+   pages = {1-35},
+   title = {A Survey of Recent Prefetching Techniques for Processor Caches},
+   volume = {49},
+   year = {2017}
+}
+
+@article{vanderwiel2000,
+   author = {Steven P. Vanderwiel and David J. Lilja},
+   doi = {10.1145/358923.358939},
+   issn = {0360-0300},
+   issue = {2},
+   journal = {ACM Computing Surveys},
+   month = {6},
+   pages = {174-199},
+   title = {Data prefetch mechanisms},
+   volume = {32},
+   year = {2000}
+}
+
+@inproceedings{jung2020,
+   author = {Jaehoon Jung and Daeyoung Park and Youngdong Do and Jungho Park and Jaejin Lee},
+   city = {New York, NY, USA},
+   doi = {10.1145/3332466.3374531},
+   isbn = {9781450368186},
+   booktitle = {Proceedings of the 25th ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming},
+   month = {2},
+   pages = {321-335},
+   publisher = {ACM},
+   title = {Overlapping host-to-device copy and computation using hidden unified memory},
+   year = {2020}
+}
+
+@article{jeong2022,
+   author = {Donghun Jeong and Jihun Park and Jungrae Kim},
+   doi = {10.1109/ACCESS.2022.3195271},
+   issn = {2169-3536},
+   journal = {IEEE Access},
+   pages = {79925-79938},
+   title = {Demand MemCpy: Overlapping of Computation and Data Transfer for Heterogeneous Computing},
+   volume = {10},
+   year = {2022}
+}
+
+@techReport{emma2005,
+   abstract = {We formulate a new approach for evaluating a prefetching algorithm. We first carry out a profiling run of a program to identify all of the misses and corresponding locations in the program where prefetches for the misses can be initiated. We then systematically control the number of misses that are prefetched, the timeliness of these prefetches, and the number of unused prefetches. We validate the accuracy of our approach by comparing it to one based on a Markov prefetch algorithm. This allows us to measure the potential benefit that any application can receive from prefetching and to analyze application behavior under conditions that cannot be explored with any known prefetching algorithm. Next, we analyze a system parameter that is vital to prefetching performance, the line transfer interval, which is the number of processor cycles required to transfer a cache line. This interval is determined by technology and bandwidth. We show that under ideal conditions, prefetching can remove nearly all of the stalls associated with cache misses. Unfortunately, real processor implementations are less than ideal. In particular, the trend in processor frequency is outrunning on-chip and off-chip bandwidths. Today, it is not uncommon for processor frequency to be three or four times bus frequency. Under these conditions, we show that nearly all of the performance benefits derived from prefetching are eroded, and in many cases prefetching actually degrades performance. We carry out quantitative and qualitative analyses of these tradeoffs and show that there is a linear relationship between overall performance and three metrics: percentage of misses prefetched, percentage of unused prefetches, and bandwidth.},
+   author = {P G Emma and A Hartstein and T R Puzak and V Srinivasan},
+   title = {Exploring the limits of prefetching},
+   year = {2005}
+}
+
+@article{silvano2023survey,
+  title={A survey on deep learning hardware accelerators for heterogeneous hpc platforms},
+  author={Silvano, Cristina and Ielmini, Daniele and Ferrandi, Fabrizio and Fiorin, Leandro and Curzel, Serena and Benini, Luca and Conti, Francesco and Garofalo, Angelo and Zambelli, Cristian and Calore, Enrico and others},
+  journal={ACM Computing Surveys},
+  year={2023},
+  publisher={ACM New York, NY}
+}
+
+@article{mikailov2017,
+   author = {Mike Mikailov and Fu-Jyh Luo and Stuart Barkley and Lohit Valleru and Stephen Whitney and Zhichao Liu and Shraddha Thakkar and Weida Tong and Nicholas Petrick},
+   doi = {10.1186/s12859-017-1902-7},
+   issn = {1471-2105},
+   issue = {S14},
+   journal = {BMC Bioinformatics},
+   month = {12},
+   pages = {501},
+   title = {Scaling bioinformatics applications on HPC},
+   volume = {18},
+   year = {2017}
+}
+
+@article{karp2025,
+author = {Martin Karp and Estela Suarez and Jan H Meinke and Måns I Andersson and Philipp Schlatter and Stefano Markidis and Niclas Jansson},
+title ={Experience and analysis of scalable high-fidelity computational fluid dynamics on modular supercomputing architectures},
+journal = {The International Journal of High Performance Computing Applications},
+volume = {39},
+number = {3},
+pages = {329-344},
+year = {2025},
+doi = {10.1177/10943420241303163},
+URL = {
+        https://doi.org/10.1177/10943420241303163
+},
+eprint = {
+        https://doi.org/10.1177/10943420241303163
+}}
+
+@article{okita2021,
+author = {Okita, Nicholas and Camargo, Alexandre and Ribeiro, José and Coimbra, Tiago and Benedicto, Caian and Faccipieri Junior, Jorge},
+year = {2021},
+month = {10},
+pages = {},
+title = {High‐performance computing strategies for seismic‐imaging software on the cluster and cloud‐computing environments},
+volume = {70},
+journal = {Geophysical Prospecting},
+doi = {10.1111/1365-2478.13158}
+}
+
+@article{aldarwish2025,
+   author = "Aldarwish, A. and Almehaid, S.",
+   title = "Novel Approach to Optimize Heterogenous High-Performance Computing Resource Utilization for Hybrid Seismic Imaging Algorithms", 
+   journal= "",
+   year = "2025",
+   volume = "2025",
+   number = "1",
+   pages = "1-5",
+   doi = "https://doi.org/10.3997/2214-4609.202539047",
+   url = "https://www.earthdoc.org/content/papers/10.3997/2214-4609.202539047",
+   publisher = "European Association of Geoscientists &amp; Engineers",
+   issn = "2214-4609"
+}
+
+@article{exascale2025,
+author = {Aymen Alsaadi and Mihael Hategan-Marandiuc and Ketan Maheshwari and Andre Merzky and Mikhail Titov and Matteo Turilli and Andreas Wilke and Justin M. Wozniak and Kyle Chard and Rafael Ferreira da Silva and Shantenu Jha and Daniel Laney},
+title ={Exascale workflow applications and middleware: An ExaWorks retrospective},
+journal = {The International Journal of High Performance Computing Applications},
+volume = {0},
+number = {0},
+pages = {10943420251331674},
+year = {0},
+doi = {10.1177/10943420251331674},
+URL = {https://doi.org/10.1177/10943420251331674},
+eprint = {https://doi.org/10.1177/10943420251331674}
+}
+
+@inproceedings{maurya2024,
+   author = {Avinash Maurya and Jie Ye and M. Mustafa Rafique and Franck Cappello and Bogdan Nicolae},
+   city = {New York, NY, USA},
+   doi = {10.1145/3659995.3660038},
+   isbn = {9798400706424},
+   booktitle = {Proceedings of the 14th Workshop on AI and Scientific Computing at Scale using Flexible Computing Infrastructures},
+   month = {6},
+   pages = {9-16},
+   publisher = {ACM},
+   title = {Breaking the Memory Wall: A Study of I/O Patterns and GPU Memory Utilization for Hybrid CPU-GPU Offloaded Optimizers},
+   year = {2024}
+}
+
+@article{ho2025,
+  title={Memory Prefetching Evaluation of Scientific Applications on A Modern HPC Arm-based Processor},
+  author={Ho, Nam and Falquez, Carlos and Portero, Antoni and Suarez, Estela and Pleiter, Dirk},
+  journal={IEEE Access},
+  year={2025},
+  publisher={IEEE},
+  doi = {10.1109/ACCESS.2025.3569533}
+}
