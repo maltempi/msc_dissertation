@@ -1,6 +1,6 @@
 % Instituto de Computação - Unicamp
 % LaTeX document class for theses and dissertations.
-% ic-tese-v3 2018-10-17
+% ic-tese-v3 2025-0505
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ic-tese-v3}[]
@@ -30,17 +30,27 @@
 
 \LoadClass[12pt,a4paper]{report}
 
+\ifcase\@thesislanguage
+\RequirePackage[english,brazil]{babel}
+\or
 \RequirePackage[english,spanish,brazil]{babel}
+\or
+\RequirePackage[english,brazil]{babel}
+\fi
+
 \usepackage[T1]{fontenc}
 \RequirePackage{graphicx}
 \PassOptionsToPackage{table}{xcolor}
 \RequirePackage{pdfpages}
-\RequirePackage{logo-ic-unicamp}
 \RequirePackage{xspace}
 
 \RequirePackage{setspace}
 \RequirePackage{geometry}
 \geometry{a4paper,top=30mm,bottom=20mm,left=30mm,right=20mm}
+
+\RequirePackage[titletoc]{appendix}
+
+\usepackage[absolute]{textpos}
 
 \RequirePackage{fancyhdr}
 
@@ -167,18 +177,12 @@
 \def\logos{
   \noindent
   \begin{center}
-  \begin{tabular}{ccc}
-    \raisebox{-.5\height}{\includegraphics[width=2.2cm]{logo-unicamp.eps}}
-    &
-    \begin{minipage}{.6\textwidth}
-      \centering
-      \textbf{\@UNICAMP} \\
-      \textbf{\@IC} \\
-    \end{minipage}
-    &
-    \raisebox{-.45\height}{\scalebox{1.11}{\LogoIcUnicampWithName}}
-  \end{tabular}
+    \textbf{\@UNICAMP} \\
+    \textbf{\@IC} \\
   \end{center}
+  \begin{textblock}{2.3}(2,1.3)
+    \includegraphics[width=2.25cm]{logo-unicamp.eps}
+  \end{textblock}
 }
 
 
@@ -226,7 +230,7 @@
   \hfill\begin{minipage}[t]{0.54\textwidth}
     \supresshyphen
     \@monopt\xspace apresentada ao Instituto de Computa\c{c}\~ao da
-    Universidade Estadual de Campinas como parte dos requisitos para a
+    Universidade Estadual de Campinas como parte dos requisitos exigidos para a
     obten\c{c}\~ao do t\'{\i}tulo de \@degnamept\xspace em Ci\^encia da
     Computa\c{c}\~ao\ifx\@cotutela\relax\else\xspace no \^ambito do acordo
     de Cotutela firmado entre a Unicamp e a \@cotutela\fi.
@@ -303,14 +307,14 @@
   ficha catalogr{\'a}fica. \\\\
   De acordo com o padr\~ao da CCPG: ``Quando se tratar de Teses e
   Disserta\c{c}\~oes financiadas por ag\^encias de fomento, os beneficiados
-  dever\~ao inserir no formul\'ario de solicita\c{c}\~ao da ficha 
-  catalogr\'afica as informa\c{c}\~oes sobre ag\^encia e  n\'umero do processo 
+  dever\~ao inserir no formul\'ario de solicita\c{c}\~ao da ficha
+  catalogr\'afica as informa\c{c}\~oes sobre ag\^encia e  n\'umero do processo
   pelo qual receberam o aux\'{\i}lio, por\'em essa informa\c{c}\~ao n\~ao
   ficar\'a vis\'ivel na ficha, ser\'a utilizada para fins estat\'isticos. Os
-  aux\'ilios recebidos devem tamb\'em ser citados na se\c{c}\~ao 
-  ``Agradecimento'' seguindo os padr\~oes exigidos pelas ag\^encias de 
-  fomento.''\\e\\``caso a   tese de doutorado seja feita em Cotutela, 
-  ser\'a necess\'ario informar na ficha catalogr\'afica o fato, a Universidade 
+  aux\'ilios recebidos devem tamb\'em ser citados na se\c{c}\~ao
+  ``Agradecimento'' seguindo os padr\~oes exigidos pelas ag\^encias de
+  fomento.''\\e\\``caso a   tese de doutorado seja feita em Cotutela,
+  ser\'a necess\'ario informar na ficha catalogr\'afica o fato, a Universidade
   convenente, o pa\'{\i}s e o  nome do orientador.''
   \else
   \includepdf[pagecommand={}]{\@fichacatalografica}
@@ -320,23 +324,8 @@
 
 \def\approvalpage{
   \iffinalversion
-    \logos
-    \vskip 20mm
-    \begin{center}
-      \large
-      {\bf \if\@autora\relax\@autor\else\@autora\fi}
-      \vskip 15mm
-      \ifcase\@thesislanguage
-        {\bf\@title}
-        \vskip 8mm
-      \or
-        {\bf\@title}
-        \vskip 8mm
-      \fi
-      {\bf \@titulo}
-    \end{center}
+    \mbox{~}
     \vfill
-    {\bf Banca Examinadora:}
     \ifx\@avalA\relax
     \else
       \begin{itemize}
@@ -357,16 +346,6 @@
       \end{center}
     \end{minipage}
     \vfill
-    \hfill\begin{minipage}[t]{\textwidth}
-      \begin{center}
-      Campinas, \@dia\xspace de
-      \ifcase \@mes \or janeiro\or fevereiro\or mar\c{c}o\or abril\or maio\or
-      junho\or julho\or agosto\or setembro\or outubro\or novembro\or
-      dezembro\fi\xspace
-      de \@ano
-      \end{center}
-    \end{minipage}
-    \vfill
   \else
     Na vers\~ao final, esta p\'agina ser\'a substitu\'{\i}da por outra
     informando a composi\c{c}\~ao da banca e que a ata de defesa est\'a arquivada
@@ -377,7 +356,6 @@
 
 \def\prefacesection#1{
   \chapter*{#1}
-  %\addcontentsline{toc}{chapter}{#1}
   \pagestyle{empty}
   \thispagestyle{empty}
 }

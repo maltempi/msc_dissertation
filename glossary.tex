@@ -1,4 +1,13 @@
 \usepackage[style=super,nonumberlist,toc]{glossaries}
+\usepackage{longtable}
+
+\newglossarystyle{wideheader}{
+  \setglossarystyle{long}
+  \renewenvironment{theglossary}
+    {\begin{longtable}{@{}p{0.25\linewidth}@{\hspace{1em}}p{\dimexpr 0.75\linewidth - 1em\relax}@{}}}
+    {\end{longtable}}
+}
+
 \makeglossaries
 
 \newacronym{hpc}{HPC}{High-Performance Computing}

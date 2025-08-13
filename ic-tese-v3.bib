@@ -8,6 +8,29 @@ URL = {https://doi.org/10.1177/10943420251340794},
 eprint = {https://doi.org/10.1177/10943420251340794}
 }
 
+@article{sz3,
+   abstract = {Today's scientific simulations require a significant reduction of data volume because of extremely large amounts of data they produce and the limited I/O bandwidth and storage space. Error-bounded lossy compression has been considered one of the most effective solutions to the above problem. In practice, however, the best-fit compression method often needs to be customized or optimized in particular because of diverse characteristics in different datasets and various user requirements on the compression quality and performance. In this paper, we address this issue with a novel modular, composable compression framework named SZ3. Our contributions are four-folds. (1) We develop SZ3 which features an innovative modular abstraction for the prediction-based compression framework, such that compression modules can be plugged in easily to create new compressors based on characteristics of data and user requirements. (2) We create a new compression pipeline by SZ3 for GAMESS data, which significantly improves the compression ratios over state-of-the-art compressors. (3) We develop an adaptive compression pipeline by SZ3 for APS data with minimal efforts, which leads to the best rate-distortion among all existing error-bounded lossy compressors for any bit-rate. (4) We compare the sustainability of SZ3 with leading error-bounded prediction-based compressors, and then demonstrate the necessity of diverse pipelines by integrating and evaluating several compression pipelines on diverse scientific datasets from multiple disciplines. Experiments show that SZ3 incurs very limited overhead in compressor integration and our customized compression pipelines lead to up to 20% improvement in compression ratios under the same data distortion, when compared with the best existing approach.},
+   author = {Xin Liang and Kai Zhao and Sheng Di and Sihuan Li and Robert Underwood and Ali M. Gok and Jiannan Tian and Junjing Deng and Jon C. Calhoun and Dingwen Tao and Zizhong Chen and Franck Cappello},
+   doi = {10.1109/TBDATA.2022.3201176},
+   issn = {23327790},
+   issue = {2},
+   journal = {IEEE Transactions on Big Data},
+   keywords = {Big data,data reduction,error-bounded lossy compression,large-scale scientific simulation},
+   month = {4},
+   pages = {485-498},
+   publisher = {Institute of Electrical and Electronics Engineers Inc.},
+   title = {SZ3: A Modular Framework for Composing Prediction-Based Error-Bounded Lossy Compressors},
+   volume = {9},
+   year = {2023}
+}
+
+@inproceedings{liu2022,
+  title={Lobster: Load balance-aware I/O for distributed DNN training},
+  author={Liu, Jie and Nicolae, Bogdan and Li, Dong},
+  booktitle={Proceedings of the 51st International Conference on Parallel Processing},
+  pages={1--11},
+  year={2022}
+}
 
 @misc{sc23,
  title={Introducing Prefetching and Data Compression to Accelerate Checkpointing for Inverse Seismic Problems},
@@ -442,6 +465,23 @@ edition = {6th}
    year = {2020}
 }
 
+@techReport{h100,
+   author = {NVIDIA Corporation},
+   institution = {NVIDIA Corporation},
+   title = {NVIDIA H100 Tensor Core GPU Architecture},
+   url = {https://resources.nvidia.com/en-us-hopper-architecture/nvidia-h100-tensor-c},
+   year = {2023}
+}
+
+
+@techReport{b100,
+   author = {NVIDIA Corporation},
+   institution = {NVIDIA Corporation},
+   title = {NVIDIA Blackwell Architecture Technical Brief},
+   url = {https://resources.nvidia.com/en-us-blackwell-architecture/blackwell-architecture-technical-brief},
+   year = {2025}
+}
+
 @techReport{xeon,
    author = {Intel},
    institution = {Intel},
@@ -449,6 +489,24 @@ edition = {6th}
    url = {https://cdrdv2-public.intel.com/840270/APP-for-Intel-Xeon-Processors.pdf},
    year = {2025}
 }
+
+@techReport{amdmi300x,
+   author = {AMD},
+   institution = {AMD},
+   title = {AMD CDNA 3 Architecture - The all-new AMD GPU architecture for the modern era of HPC and AI},
+   url = {https://www.amd.com/content/dam/amd/en/documents/instinct-tech-docs/white-papers/amd-cdna-3-white-paper.pdf},
+   year = {2025}
+}
+
+@techReport{intelgpu,
+   author = {Intel},
+   institution = {Intel},
+   title = {Intel Data Center GPU Max Series},
+   url = {https://www.intel.com/content/dam/www/central-libraries/us/en/documents/2023-01/data-center-gpu-max-series-product-brief.pdf},
+   year = {2023}
+}
+
+
 
 
 @inproceedings{barbosa2023,
