@@ -47,16 +47,3 @@ This research has been presented in several venues:
 - Maltempi, T., Rigo, S., Pereira, M., Yviquel, H., Costa, J., & Araujo, G. (2024). [Euro-Par Conference Publication]
 
 - Maltempi, T., Rigo, S., Pereira, M., Yviquel, H., Costa, J., Souza, A., & Araujo, G. (2023). Introducing Prefetching and Data Compression to Accelerate Checkpointing for Inverse Seismic Problems. [Poster presented at Super Computing 2023 (SC'23)](https://sc23.supercomputing.org/proceedings/tech_poster/poster_files/rpost129s3-file2.pdf)
-
-## Citation
-
-```bibtex
-@article{ijhpca,
-  author = {Thiago Maltempi and Sandro Rigo and Marcio Pereira and Hervé Yviquel and Gustavo Leite and Orlando Lee and Jessé Costa and Guido Araujo},
-  title = {Checkpointing fine-tuning for accelerating seismic applications in GPUs},
-  journal = {The International Journal of High Performance Computing Applications},
-  year = {2025},
-  doi = {10.1177/10943420251340794},
-  URL = {https://doi.org/10.1177/10943420251340794}
-}
-```
